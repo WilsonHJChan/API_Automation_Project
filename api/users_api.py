@@ -1,5 +1,6 @@
-import requests
 import logging
+
+import requests
 
 from config import BASE_URL
 
@@ -8,7 +9,6 @@ logging.basicConfig(level=logging.INFO)
 
 
 def get_user(user_id):
-
     url = f"{BASE_URL}/users/{user_id}"
 
     logging.info(f"Sending GET request: {url}")
@@ -21,7 +21,6 @@ def get_user(user_id):
 
 
 def create_user(user_data):
-
     url = f"{BASE_URL}/users"
 
     logging.info(f"Sending POST request: {url}")
@@ -34,7 +33,6 @@ def create_user(user_data):
 
 
 def update_user(user_id, user_data):
-
     url = f"{BASE_URL}/users/{user_id}"
 
     logging.info(f"Sending PUT request: {url}")
@@ -47,7 +45,6 @@ def update_user(user_id, user_data):
 
 
 def delete_user(user_id):
-
     url = f"{BASE_URL}/users/{user_id}"
 
     logging.info(f"Sending DELETE request: {url}")
